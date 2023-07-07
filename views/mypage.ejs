@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link href="/mypage/mypage.css" rel="stylesheet" />
+    <script defer src="/mypage/mypage.js"></script>
+    <title>유저 마이 페이지</title>
+  </head>
+  <body>
+    <header class="header-container">
+      <a href="/main" id="homeBtn">HOME</a>
+      <h1 id="title">ɴᴏᴅᴇ ʙᴏᴏᴋ📚</h1>
+    </header>
+    <div class="user-container">
+      <section class="user-section">
+        <h2><%=nickname %>회원님 환영합니다.</h2>
+        <form class="user-detail-form" id="user-detail">
+          <div class="user">
+            <ul class="user-tag" id="user-tag"></ul>
+            <button id="changeNicknameBtn">닉네임 변경</button>
+            <button id="changeInterestBtn">관심사 변경</button>
+            <button id="changePasswordBtn">패스워드 변경</button>
+            <button id="userFireBtn">회원 탈퇴</button>
+          </div>
+        </form>
+      </section>
+    </div>
+    <div class="section-box">
+      <section class="post-section">
+        <div class="post">
+          <h2><%=nickname %>의 게시글 조회</h2>
+          <div class="post-card" id="userPostTag"></div>
+        </div>
+      </section>
+
+      <section class="comment-section">
+        <div class="comment">
+          <h2><%=nickname %>의 댓글 조회</h2>
+          <div class="cards" id="userCommentTag"></div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

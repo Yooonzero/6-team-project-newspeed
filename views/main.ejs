@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="/main/main.css" rel="stylesheet" />
+    <script src="/main/main.js" defer></script>
+    <title>메인페이지</title>
+  </head>
+
+  <body>
+    <header class="header-container">
+      <a href="/main" id="homeBtn">HOME</a>
+      <h1 id="title">ɴᴏᴅᴇ ʙᴏᴏᴋ📚</h1>
+    </header>
+    <div class="form-container">
+      <form class="search-form">
+        <input type="text" name="search" placeholder="검색어 입력" />
+        <button type="submit" id="search">검색</button>
+      </form>
+      <% if (isLoggedIn) { %>
+      <form action="/logout" method="GET">
+        <button type="submit" class="logout-button">logout</button>
+      </form>
+      <% } else { %>
+      <form action="/login" method="GET">
+        <button type="submit" class="login-button">login</button>
+      </form>
+      <% } %>
+      <a href="/mypage" class="mypage">👦🏻</a>
+    </div>
+    <main>
+      <div class="container-box">
+        <section class="categories-container">
+          <form class="category-form">
+            <button type="button" value="Music" class="music-button">음악</button>
+            <button type="button" value="Movie" class="movie-button">영화</button>
+            <button type="button" value="Restaurant" class="restaurant-button">맛집</button>
+            <button type="button" value="Exercise" class="exercise-button">운동</button>
+            <button type="button" value="Travel" class="travel-button">여행</button>
+          </form>
+        </section>
+        <section class="post-container">
+          <nav>
+            <button class="interest-posts-button">관심글</button>
+            <button class="recent-posts-button">최신글</button>
+            <form action="/posts" method="GET">
+              <button>글작성</button>
+            </form>
+          </nav>
+          <!-- cards -->
+          <div class="cards">
+            <% data.postList.forEach((post, idx)=> { %>
+            <div class="post-card">
+              <a href="/posts/detail/<%=post.postId%>">게시글 번호: <<%= post.postId %>></a>
+              <hr />
+              <span>닉네임: <%= post.Nickname %></span>
+              <hr />
+              <span>카테고리: <%= post.categoryList %></span>
+              <hr />
+              <span>제목: <%= post.title %></span>
+              <hr />
+              <span>내용: <%-post.content %></span>
+              <hr />
+              <!-- 좋아요 버튼 👍 추가-->
+              <div class="like-container">
+                <button class="like-button" data-post-id="<%= post.postId %>">👍</button>
+                <span class="like-count-<%= post.postId %>"> <%= post.Likes.length %> </span>
+              </div>
+            </div>
+            <% }) %>
+          </div>
+        </section>
+        <section class="info-container">
+          <div class="best-top-10">
+            <h2>Best Top 10</h2>
+            <div class="title-card">
+              <p>60</p>
+              <a>과제 너무 어려워...</a>
+            </div>
+            <div class="title-card">
+              <p>61</p>
+              <a>야 너두?...</a>
+            </div>
+            <div class="title-card">
+              <p>62</p>
+              <a>야 나두!...</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

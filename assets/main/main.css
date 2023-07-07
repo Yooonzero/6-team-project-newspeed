@@ -1,0 +1,245 @@
+body {
+  margin: 40px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background-color: #f6f6f6;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header-container #title {
+  margin: 0 auto;
+  font-size: 40px;
+  color: black;
+}
+
+.header-container #homeBtn {
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #ecd8b2;
+  color: black;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.header-container #homeBtn:hover {
+  background-color: #ebc47d;
+}
+
+/* 35번까지는 헤더 스타일 */
+
+.form-container {
+  background-color: #f6f6f6;
+  border-radius: 5px;
+  text-align: center;
+  width: 400px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+.search-form input {
+  width: 300px;
+  max-width: 70%;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+.search-form button {
+  font-weight: bold;
+  width: 50px;
+  padding: 10px;
+  margin-left: 10px;
+  background-color: #ecd8b2;
+  color: black;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.search-form button:hover {
+  background-color: #ebc47d;
+}
+
+.logout-button,
+.login-button {
+  font-weight: bold;
+  height: 40px;
+  margin-right: 10px;
+  background-color: #ecd8b2;
+  color: black;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #ebc47d;
+}
+
+.logout-button:hover {
+  background-color: #ebc47d;
+}
+
+.mypage {
+  cursor: pointer;
+}
+
+/* 97번까지는 헤더아래의 검색 및 로그인폼 스타일 */
+
+.container-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.categories-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 5%;
+  max-width: 5%;
+  height: 300px;
+  margin: 20px;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.categories-container button {
+  font-weight: bold;
+  height: 40px;
+  width: 90px;
+  max-width: 100%;
+  margin-bottom: 10px;
+  background-color: #ecd8b2;
+  color: black;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.categories-container button:hover {
+  background-color: #ebc47d;
+}
+
+.post-container {
+  width: 45%;
+  margin: 20px;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.post-container nav {
+  display: flex;
+}
+
+.post-container nav button {
+  font-weight: bold;
+  height: 40px;
+  width: 100px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  background-color: #ecd8b2;
+  color: black;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.post-container nav button:hover {
+  background-color: #ebc47d;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.post-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 100%;
+  margin: 10px;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.post-card hr {
+  width: 100%;
+  height: 1px;
+  border: none;
+  background-color: #ccc;
+  margin: 5px 0;
+}
+
+.like-container {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  width: 60px;
+  margin-top: 10px;
+  background-color: #ecd8b2;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.like-button {
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: #ecd8b2;
+  border: none;
+  border-radius: 3px;
+}
+
+.like-button:hover {
+  background-color: #ebc47d;
+}
+
+.info-container {
+  height: 300px;
+  width: 10%;
+  margin: 20px;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.info-container h2 {
+  background-color: #ecd8b2;
+  color: black;
+  border: none;
+  border-radius: 3px;
+}
+
+.categories-container,
+.info-container {
+  position: sticky;
+  top: 20px;
+}

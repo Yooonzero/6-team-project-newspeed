@@ -1,0 +1,5 @@
+npx sequelize model:generate --name Users --attributes nickname:string,password:string,email:string,category:string
+npx sequelize model:generate --name Posts --attributes UserId:integer,title:string,content:string,category:string,img:string,likes:integer
+npx sequelize model:generate --name Comments --attributes PostId:integer,UserId:integer,content:string
+npx sequelize model:generate --name Categories --attributes PostId:integer,categoryList:string
+npx sequelize model:generate --name Likes --attributes UserID:integer,PostId:integer,likes:integer

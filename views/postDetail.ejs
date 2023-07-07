@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/post/postDetail.js" defer></script>
+  <link href="/post/post.css" rel="stylesheet" />
+  <title>게시글 상세조회</title>
+</head>
+
+<body>
+  <header class="header-container">
+    <a href="/main" id="homeBtn">HOME</a>
+    <h1 id="title">ɴᴏᴅᴇ ʙᴏᴏᴋ📚</h1>
+  </header>
+  <form class="postForm" enctype="multipart/form-data">
+    <label>제목:</label>
+    <input type="text" id="postTitle" placeholder="제목을 입력하세요" />
+    <br />
+    <label>카테고리:</label>
+    <select class="category" id="postInterest">
+      <option value="Music">음악</option>
+      <option value="Movie">영화</option>
+      <option value="Restaurant">맛집</option>
+      <option value="Exercise">운동</option>
+      <option value="Travel">여행</option>
+    </select>
+    <br />
+    <label>내용:</label>
+    <textarea id="postContent" placeholder="내용을 입력하세요"></textarea>
+    <br />
+    <input type="file" name="file" id="file" onchange="readURL(this)" />
+    <img id="preview" />
+    <br />
+    <div class="button-container">
+      <button type="button" value="<%=postId %>" id="modifyBtn">수정</button>
+      <button type="button" value="<%=postId %>" id="deleteBtn">삭제</button>
+      <button type="button" id="cancel">취소</button>
+    </div>
+  </form>
+</body>
+
+</html>

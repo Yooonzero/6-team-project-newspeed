@@ -1,0 +1,115 @@
+body {
+  margin: 40px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background-color: #f6f6f6;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header-container #title {
+  margin: 0 auto;
+  font-size: 40px;
+  color: black;
+}
+
+.header-container #homeBtn {
+  font-weight: bold;
+  font-size: 20px;
+  background-color: #ecd8b2;
+  color: black;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.header-container #homeBtn:hover {
+  background-color: #ebc47d;
+}
+
+.postForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 40px auto;
+  max-width: 50%;
+  padding: 20px;
+  background-color: #f6f6f6;
+  border-radius: 5px;
+}
+
+.postForm label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  float: left;
+}
+
+.postForm select {
+  width: 10%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+.postForm input {
+  width: 50%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+.postForm textarea {
+  width: 100%;
+  height: 200px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+  resize: none;
+}
+
+.postForm button {
+  font-weight: bold;
+  width: 150px;
+  padding: 10px;
+  margin: 0 10px 20px 20px;
+  background-color: #ecd8b2;
+  color: black;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.form-button {
+  display: flex;
+  flex-direction: row;
+}
+
+.postForm button:hover {
+  background-color: #ebc47d;
+}
+
+#preview {
+  max-width: 100%;
+  margin-top: 10px;
+}
+
+.button-container {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
